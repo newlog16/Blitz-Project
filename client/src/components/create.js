@@ -65,10 +65,10 @@ export default class Create extends Component {
   render() {
     return (
       <div style={{ marginTop: 20 }}>
-        <h3>Create New Record</h3>
+        <h3>Criar tarefa nova</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Name of the person: </label>
+            <label>Tarefa: </label>
             <input
               type="text"
               className="form-control"
@@ -77,7 +77,7 @@ export default class Create extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Person's position: </label>
+            <label>Informações: </label>
             <input
               type="text"
               className="form-control"
@@ -91,12 +91,12 @@ export default class Create extends Component {
                 className="form-check-input"
                 type="radio"
                 name="priorityOptions"
-                id="priorityLow"
-                value="Intern"
-                checked={this.state.person_level === "Intern"}
+                id="priorityHigh"
+                value="pendente"
+                checked={this.state.person_level === "pendente"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Intern</label>
+              <label className="form-check-label">Pendente</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -104,29 +104,29 @@ export default class Create extends Component {
                 type="radio"
                 name="priorityOptions"
                 id="priorityMedium"
-                value="Junior"
-                checked={this.state.person_level === "Junior"}
+                value="em andamento"
+                checked={this.state.person_level === "em andamento"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Junior</label>
+              <label className="form-check-label">Em andamento</label>
             </div>
             <div className="form-check form-check-inline">
               <input
                 className="form-check-input"
                 type="radio"
                 name="priorityOptions"
-                id="priorityHigh"
-                value="Senior"
-                checked={this.state.person_level === "Senior"}
+                id="priorityLow"
+                value="concluido"
+                checked={this.state.person_level === "concluido"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Senior</label>
+              <label className="form-check-label">Concluido</label>
             </div>
           </div>
           <div className="form-group">
             <input
               type="submit"
-              value="Create person"
+              value="Criar tarefa"
               className="btn btn-primary"
             />
           </div>

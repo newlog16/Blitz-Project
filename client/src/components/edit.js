@@ -83,7 +83,7 @@ class Edit extends Component {
         <h3 align="center">Update Record</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Person's Name: </label>
+            <label>Tarefa </label>
             <input
               type="text"
               className="form-control"
@@ -92,7 +92,7 @@ class Edit extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Position: </label>
+            <label>Informações: </label>
             <input
               type="text"
               className="form-control"
@@ -106,12 +106,12 @@ class Edit extends Component {
                 className="form-check-input"
                 type="radio"
                 name="priorityOptions"
-                id="priorityLow"
-                value="Intern"
-                checked={this.state.person_level === "Intern"}
+                id="priorityHigh"
+                value="Pendente"
+                checked={this.state.person_level === "Pendente"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Intern</label>
+              <label className="form-check-label">Pendente</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -119,23 +119,23 @@ class Edit extends Component {
                 type="radio"
                 name="priorityOptions"
                 id="priorityMedium"
-                value="Junior"
-                checked={this.state.person_level === "Junior"}
+                value="Em andamento"
+                checked={this.state.person_level === "Em andamento"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Junior</label>
+              <label className="form-check-label">Em andamento</label>
             </div>
             <div className="form-check form-check-inline">
               <input
                 className="form-check-input"
                 type="radio"
                 name="priorityOptions"
-                id="priorityHigh"
-                value="Senior"
-                checked={this.state.person_level === "Senior"}
+                id="priorityLow"
+                value="Concluido"
+                checked={this.state.person_level === "Concluido"}
                 onChange={this.onChangePersonLevel}
               />
-              <label className="form-check-label">Senior</label>
+              <label className="form-check-label">Concluido</label>
             </div>
           </div>
           <br />
@@ -143,7 +143,7 @@ class Edit extends Component {
           <div className="form-group">
             <input
               type="submit"
-              value="Update Record"
+              value="Atualizar Tarefa"
               className="btn btn-primary"
             />
           </div>

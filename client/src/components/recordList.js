@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // This will require to npm install axios
 import axios from 'axios';
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Record = (props) => (
   <tr>
@@ -9,14 +9,14 @@ const Record = (props) => (
     <td>{props.record.person_position}</td>
     <td>{props.record.person_level}</td>
     <td>
-      <Link to={"/edit/" + props.record._id}>Edit</Link> |
+      <Link to={"/edit/" + props.record._id}>Editar</Link> |
       <a
         href="/"
         onClick={() => {
           props.deleteRecord(props.record._id);
         }}
       >
-        Delete
+        Apagar
       </a>
     </td>
   </tr>
@@ -70,14 +70,14 @@ export default class RecordList extends Component {
   render() {
     return (
       <div>
-        <h3>Record List</h3>
+        <h3>Lista de Tarefas</h3>
         <table className="table table-striped" style={{ marginTop: 20 }}>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Level</th>
-              <th>Action</th>
+              <th>Tarefa</th>
+              <th>Informações</th>
+              <th>Status</th>
+              <th>Opções</th>
             </tr>
           </thead>
           <tbody>{this.recordList()}</tbody>

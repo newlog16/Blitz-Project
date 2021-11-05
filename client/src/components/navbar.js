@@ -1,11 +1,11 @@
 import React from "react";
- 
+
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
- 
+
 // We import NavLink to utilize the react router.
 import { NavLink } from "react-router-dom";
- 
+
 // Here, we display our Navbar
 const Navbar = () => {
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
- 
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
@@ -39,5 +39,5 @@ const Navbar = () => {
     </div>
   );
 };
- 
+
 export default Navbar;

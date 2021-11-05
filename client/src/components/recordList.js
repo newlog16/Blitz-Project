@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // This will require to npm install axios
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Record = (props) => (
   <tr>
